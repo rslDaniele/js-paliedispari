@@ -9,7 +9,7 @@ console.log(parola);
 // system checks if parola is a palindrome word
 
 
-// function checkPalindroma() {
+function checkPalindroma(parola) {
   if (parola === parola.split('').reverse().join('')) {
     document.write("la parola è palindroma!");
     console.log(risposta);
@@ -17,4 +17,6 @@ console.log(parola);
     document.write("la parola non è palindorma!");
     console.log(risposta);
   }
-// }
+}
+
+checkPalindroma(parola);
