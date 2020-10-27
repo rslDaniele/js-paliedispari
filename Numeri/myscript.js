@@ -27,12 +27,13 @@ console.log(risultato);
 
 // system checks if somma is even or odd
 function evenOdd(somma) {
-   if (somma % 2 === 0) {
-    console.log("Pari");
+   if (somma % 2 == 0) {
+    document.write("Pari");
   } else {
-    console.log("Dispari");
+    document.write("Dispari");
   }
 
 }
 
-var risposta = evenOdd(somma);
+evenOdd(somma);
+// var risposta = evenOdd(somma);
