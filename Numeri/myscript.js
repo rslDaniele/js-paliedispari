@@ -4,36 +4,43 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-var sceltaUser = prompt("Pari o Dispari ?")
+var sceltaUser = prompt("Pari o Dispari ?");
 console.log(sceltaUser);
 
-var sceltaNumero = prompt("Scegli un numero da 1 a 5")
+var sceltaNumero = parseInt(prompt("Scegli un numero da 1 a 5"));
+console.log(sceltaNumero);
 
-var numeroUser = parseInt(sceltaNumero);
-console.log(numeroUser);
-
-var numeroAi =  Math.floor(Math.random() * 5) + 1;
+var numeroAi =  generaNumero();
 console.log(numeroAi);
 
-// system adds up numeroAi and numeroUser
-function sommaNum(numeroAi, numeroUser) {
-  var risultato = numeroAi + numeroUser;
-  return risultato;
+// FUNZIONE CHE GENERA NUMERO RANDOMICO 1 a 5
+function generaNumero() {
+
+  return Math.floor(Math.random() * 5) + 1;
 }
 
-var somma = sommaNum(numeroAi, numeroUser);
+// SOMMA I DUE NUMERI
+var somma = (numeroAi + sceltaNumero);
 console.log(somma);
-console.log(risultato);
 
-// system checks if somma is even or odd
-function evenOdd(somma) {
-   if (somma % 2 == 0) {
-    document.write("Pari");
+// FUNZIONE CHE STABILISCE PARI O DISPARI
+
+function evenOdd(x) {
+  if (x % 2 === 0) {
+    return "pari"
   } else {
-    document.write("Dispari");
+    return "dispari"
   }
-
 }
-// TEST PUSH KRAKEN
-evenOdd(somma);
-// var risposta = evenOdd(somma);
+
+// LANCIO FUNZIONE
+// definiesco una variabile di appoggio che permetta di lanciare la funzione e sostituire all'argomento X la mia variabile somma
+var esito = evenOdd(somma);
+console.log(esito);
+
+// TROVA VINCITORE
+if (sceltaUser === esito) {
+  document.getElementById('win').innerHTML = "hai vinto!";
+} else {
+  document.getElementById('win').innerHTML = "hai perso!";
+}
