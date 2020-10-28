@@ -10,13 +10,13 @@ console.log(sceltaUser);
 var sceltaNumero = parseInt(prompt("Scegli un numero da 1 a 5"));
 console.log(sceltaNumero);
 
-var numeroAi =  generaNumero();
+var numeroAi =  generaNumero(5);
 console.log(numeroAi);
 
 // FUNZIONE CHE GENERA NUMERO RANDOMICO 1 a 5
-function generaNumero() {
+function generaNumero(i) {
 
-  return Math.floor(Math.random() * 5) + 1;
+  return Math.floor(Math.random() * i) + 1;
 }
 
 // SOMMA I DUE NUMERI
