@@ -10,7 +10,7 @@ console.log(parola);
 
 
 function checkPalindroma(parola) {
-  if (parola === parola.split('').reverse().join('')) {
+  if (parola.toUpperCase() === parola.toUpperCase().split('').reverse().join('')) {
     document.write("la parola è palindroma!");
     console.log(risposta);
   } else {
