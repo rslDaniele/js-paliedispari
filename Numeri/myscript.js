@@ -34,6 +34,6 @@ function evenOdd(somma) {
   }
 
 }
-
+// TEST PUSH KRAKEN
 evenOdd(somma);
 // var risposta = evenOdd(somma);
